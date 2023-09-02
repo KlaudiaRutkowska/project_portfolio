@@ -30,8 +30,9 @@ module.exports = {
                 'logo-light-purple': '#EEEBFF',
                 'logo-text-color': '#7B61FF',
 
-                'light-grey': '#6B7280',
                 'dark-purple': '#3730A3',
+                'light-grey': '#6B7280',
+                'dark-blue': '#1F2937',
             },
             rotate: {
                 '30': '30deg',

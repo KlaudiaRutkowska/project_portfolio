@@ -1,0 +1,29 @@
+---
+import { Image } from "astro:assets";
+import ButtonPurple from "./ButtonPurple.astro";
+import ButtonWhite from "./ButtonWhite.astro";
+import heroPhoto from "../images/hero-photo.jpg";
+---
+
+<section>
+    <div class="container my-24 grid grid-cols-12 gap-[25px]">
+        <div class="mr-20 col-start-1 col-span-7 flex flex-col items-start justify-center gap-y-10">
+            
+            <p class="text-dark-purple flex items-center gap-x-2 text-xl font-medium 
+            before:content-[''] before:block before:h-[1px] before:w-24 before:bg-dark-purple">Jessica Strosin</p>
+            
+            <h1 class="text-7xl text-dark-blue font-bold">Creative thinker Minimalism lover</h1>
+            <p class="text-light-grey">
+                Hi, I'm Jessica. I'm UI/UX Designer. If you are looking for Designer to build your brands and grow your business Let's shake hands with me.
+            </p>
+            <div class="flex gap-x-5">
+                <ButtonPurple>Hire me</ButtonPurple>
+                <ButtonWhite>Read more</ButtonWhite>
+            </div>
+            <hr class="h-[1px] -my-5 border-t-0 bg-[#6B7280] opacity-100 dark:opacity-50 w-full" />
+            <p class="text-xs text-light-grey">I am currently open for part-time work.</p>
+        </div>
+
+        <Image src={heroPhoto} alt="" class="col-start-8 col-span-5 rounded-md" />
+    </div>
+</section>
