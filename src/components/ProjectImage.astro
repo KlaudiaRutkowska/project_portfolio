@@ -1,0 +1,54 @@
+---
+import { Image } from "astro:assets";
+import type { ImageMetadata } from "astro";
+
+interface Props {
+    image: ImageMetadata
+    alt: string
+    title: string
+    sponsor: string
+    class?: string
+}
+
+const { image, alt, title, sponsor, class: className } = Astro.props
+---
+
+<figure class:list={['relative transition-[box-shadow] hover:shadow-lg before:absolute before:top-0 before:left-0 before:right-0 before:bottom-0 before:opacity-0 before:transition-opacity overflow-hidden hover:before:opacity-20 before:duration-500 before:bg-black group/show-project', className]}>
+    <Image src={image} alt={alt} />
+
+    <div class="absolute bottom-5 translate-y-32 left-5 right-5 bg-white font-medium transition-transform duration-500 group-hover/show-project:translate-y-0">
+        <a href="#0" class="flex justify-between items-center p-6 group">
+            <div>
+                <h3 class="text-dark-blue text-lg transition-colors group-hover:text-dark-purple">{title}</h3>
+                <p class="text-[#9CA3AF] text-sm transition-colors group-hover:text-logo-text-color">{sponsor}</p>
+            </div>
+            <svg
+                width="30"
+                height="30"
+                viewBox="0 0 30 30"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class=" transition-transform translate-x-0 group-hover:translate-x-3"
+            >
+                <path
+                    d="M6.24994 15H23.7499"
+                    stroke="#1F2937"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="transition-colors group-hover:stroke-dark-purple"
+                >
+                </path>
+                <path
+                    d="M15 6.24994L23.75 14.9999L15 23.7499"
+                    stroke="#1F2937"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="tramsition-colors group-hover:stroke-dark-purple"
+                >
+                </path>
+            </svg>
+        </a>
+    </div>
+</figure>
