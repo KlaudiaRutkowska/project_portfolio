@@ -1,9 +1,9 @@
 ---
-import { Image } from "astro:assets";
 import projectsPhoto1 from "../images/projects-photo1.jpg";
 import projectsPhoto2 from "../images/projects-photo2.jpg";
 import projectsPhoto3 from "../images/projects-photo3.jpg";
 import projectsPhoto4 from "../images/projects-photo4.jpg";
+import ProjectImage from './ProjectImage.astro';
 ---
 
 <section>
@@ -11,18 +11,10 @@ import projectsPhoto4 from "../images/projects-photo4.jpg";
         <h2 class="mb-[150px] text-dark-blue text-5xl font-semibold text-center">It's great to always give the customer the best feed.</h2>
 
         <div class="grid auto-cols-max gap-[30px] grid-flow-row">
-            <figure>
-                <Image src={projectsPhoto1} alt="" />
-            </figure>
-            <figure class="row-span-2">
-                <Image src={projectsPhoto2} alt=""/>
-            </figure>
-            <figure>
-                <Image src={projectsPhoto3} alt=""/>
-            </figure>
-            <figure class="col-span-2">
-                <Image src={projectsPhoto4} alt=""/>
-            </figure>
+            <ProjectImage image={projectsPhoto1} alt="Project photo 1" title="Project title here" sponsor="Google" />
+            <ProjectImage image={projectsPhoto2} alt="Project photo 2" title="Project title here" sponsor="Amazon" class="row-span-2" />
+            <ProjectImage image={projectsPhoto3} alt="Project photo 3" title="Project title here" sponsor="Netflix" />
+            <ProjectImage image={projectsPhoto4} alt="Project photo 4" title="Project title here" sponsor="Amazon" class="col-span-2" />
         </div>
     </div>
 </section>
