@@ -30,6 +30,8 @@ module.exports = {
                 'logo-light-purple': '#EEEBFF',
                 'logo-text-color': '#7B61FF',
 
+                'services-light-purple': '#EEF2FF',
+
                 'dark-purple': '#3730A3',
                 'light-grey': '#6B7280',
                 'dark-blue': '#1F2937',
