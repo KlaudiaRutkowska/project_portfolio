@@ -1,0 +1,18 @@
+---
+const variants = {
+    solid: 'px-8 py-3 border rounded-md border-dark-purple bg-dark-purple text-white transition-colors hover:text-dark-purple hover:bg-white',
+    outline: 'px-8 py-3 border rounded-md border-dark-purple text-dark-purple border-dark-purple transition-colors hover:text-white hover:bg-dark-purple'
+}
+
+interface Props {
+    title: string,
+    variant?: keyof typeof variants,
+    class?: string
+}
+
+const { title, variant = 'outline', class: className } = Astro.props
+---
+
+<button class:list={ [variants[variant], className] }> 
+    { title }
+</button>
