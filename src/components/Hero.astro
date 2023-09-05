@@ -1,7 +1,6 @@
 ---
 import { Image } from "astro:assets";
-import ButtonPurple from "./ButtonPurple.astro";
-import ButtonWhite from "./ButtonWhite.astro";
+import Button from "./Button.astro";
 import heroPhoto from "../images/hero-photo.jpg";
 ---
 
@@ -17,8 +16,8 @@ import heroPhoto from "../images/hero-photo.jpg";
                 Hi, I'm Jessica. I'm UI/UX Designer. If you are looking for Designer to build your brands and grow your business Let's shake hands with me.
             </p>
             <div class="flex gap-x-5">
-                <ButtonPurple>Hire me</ButtonPurple>
-                <ButtonWhite>Read more</ButtonWhite>
+                <Button title="Hire me" variant="solid"></Button>
+                <Button title="Read more" class="text-dark-purple border-dark-purple"></Button>
             </div>
             <hr class="h-[1px] -my-5 border-t-0 bg-[#6B7280] opacity-100 dark:opacity-50 w-full" />
             <p class="text-xs text-light-grey">I am currently open for part-time work.</p>
