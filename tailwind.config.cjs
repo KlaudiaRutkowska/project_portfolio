@@ -20,7 +20,13 @@ module.exports = {
         },
         container: {
             center: true,
-            padding: '130px'
+            padding: {
+                DEFAULT: '40px',
+                sm: '60px',
+                md: '80px',
+                lg: '100px',
+                xl: '130px'
+            },
         },
         fontFamily: {
             'inter': ['Inter', 'sans-serif'],
