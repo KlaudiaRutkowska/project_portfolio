@@ -53,6 +53,15 @@ module.exports = {
             },
             maxWidth: {
                 '56': '14rem'
+            },
+            animation: {
+                marquee: 'marquee 10s linear infinite'
+            },
+            keyframes: {
+                marquee: {
+                    'from': { transform: 'translateX(0)' },
+                    'to': { transform: 'translateX(calc(-100% - 6rem))' }
+                }
             }
         },
 	},
