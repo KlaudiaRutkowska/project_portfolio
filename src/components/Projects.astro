@@ -8,13 +8,13 @@ import ProjectImage from './ProjectImage.astro';
 
 <section>
     <div class="container py-[150px]">
-        <h2 class="mb-[150px] text-dark-blue text-5xl font-semibold text-center">It's great to always give the customer the best feed.</h2>
+        <h2 class="mb-10 md:mb-16 xl:mb-[150px] text-dark-blue text-3xl sm:text-4xl xl:text-5xl font-semibold text-center">It's great to always give the customer the best feed.</h2>
 
-        <div class="grid auto-cols-max gap-[30px] grid-flow-row">
+        <div class="grid gap-[30px] grid-cols-2 grid-flow-row">
             <ProjectImage image={projectsPhoto1} alt="Project photo 1" title="Project title here" sponsor="Google" />
             <ProjectImage image={projectsPhoto2} alt="Project photo 2" title="Project title here" sponsor="Amazon" class="row-span-2" />
             <ProjectImage image={projectsPhoto3} alt="Project photo 3" title="Project title here" sponsor="Netflix" />
-            <ProjectImage image={projectsPhoto4} alt="Project photo 4" title="Project title here" sponsor="Amazon" class="col-span-2" />
+            <ProjectImage image={projectsPhoto4} alt="Project photo 4" title="Project title here" sponsor="Amazon" class="!col-span-2 min-h-[149px]" />
         </div>
     </div>
 </section>
