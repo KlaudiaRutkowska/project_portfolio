@@ -15,7 +15,7 @@ import Offer from "./Offer.astro";
         <div class="mt-24 flex flex-row items-center">
             <Image src={offersPhoto} alt="" />
 
-            <div class="ml-6 mr-8 flex flex-col gap-y-4">
+            <div class="ml-6 max-h-[572px] grid grid-cols-2 gap-y-4 gap-x-8 overflow-auto">
                 <Offer 
                     title="Web design" 
                     description="Provide our customers with optimized user-friendly experience to increase the efficiency of digital products."
@@ -33,9 +33,6 @@ import Offer from "./Offer.astro";
                     description="Provide our customers with optimized user-friendly experience to increase the efficiency of digital products."
                     linkText="See Works"
                 />
-            </div>
-
-            <div class="flex flex-col gap-y-4">
                 <Offer 
                     title="Mobile design" 
                     description="Provide our customers with optimized user-friendly experience to increase the efficiency of digital products."
@@ -53,6 +50,7 @@ import Offer from "./Offer.astro";
                     description="Provide our customers with optimized user-friendly experience to increase the efficiency of digital products."
                     linkText="See Works"
                 />
+                
             </div>
 
         </div>
