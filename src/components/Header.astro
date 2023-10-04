@@ -2,21 +2,46 @@
 import Button from "./Button.astro";
 ---
 
-<header class="container mt-24">
-    <div class="flex justify-between items-center">
+<header class="mt-10 lg:mt-24 sticky top-0 z-50 bg-white">
+    <div class="container flex justify-between items-center py-5">
+    <!-- <div class="flex justify-between items-center sm:px-20 md:px-32 py-5"> -->
         <a href="#" class="bg-logo-light-purple h-15.5 w-15.5 rounded-full  text-logo-text-color text-2xl font-semibold flex justify-center items-center">
             <p class="rotate-30 pr-[14.41px] pl-[16px]">D</p>
         </a>
         
-        <nav>
-            <ul class="flex justify-center items-center gap-x-4 text-light-grey text-lg">
-                <li><a href="#" class="px-8 py-3">Services</a></li>
-                <li><a href="#" class="px-8 py-3">Works</a></li>
-                <li><a href="#" class="px-8 py-3">Blog</a></li>
-                <li class="ml-8">
+        <button id="hamburger"
+            class="group/hamburger block lg:hidden text-black w-10 h-10 relative focus:outline-none bg-white hover:text-dark-purple">
+            <div class="block w-6 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                <span aria-hidden="true"
+                    class="block absolute h-0.5 w-6 bg-current transform transition-transform duration-500 ease-in-out -translate-y-1.5 group-[.open]/hamburger:rotate-45 group-[.open]/hamburger:translate-y-0"></span>
+                <span aria-hidden="true"
+                    class="block absolute h-0.5 w-6 bg-current transform transition-opacity duration-500 ease-in-out group-[.open]/hamburger:opacity-0"></span>
+                <span aria-hidden="true"
+                    class="block absolute h-0.5 w-6 bg-current transform transition-transform duration-500 ease-in-out translate-y-1.5 group-[.open]/hamburger:-rotate-45 group-[.open]/hamburger:translate-y-0"></span>
+            </div>
+        </button>
+
+        <nav class="absolute lg:static left-0 right-0 top-full origin-top scale-y-0 invisible lg:visible opacity-0 lg:opacity-100 transition-[visibility,opacity,transform] delay-[150ms,0ms,0ms] lg:block opened:scale-y-100 opened:visible opened:opacity-100 opened:delay-0 lg:transform-none shadow-md lg:shadow-none">
+            
+            <ul class="flex flex-col lg:flex-row justify-center items-center gap-x-0 lg:gap-x-4 gap-y-4 lg:gap-y-0 pb-4 lg:pb-0 text-light-grey  bg-white text-base sm:text-lg">
+                <li class="transition-colors delay-150 hover:text-dark-purple"><a href="#" class="px-20 lg:px-8 py-3">Services</a></li>
+                <li class="transition-colors delay-150 hover:text-dark-purple"><a href="#" class="px-20 lg:px-8 py-3">Works</a></li>
+                <li class="transition-colors delay-150 hover:text-dark-purple"><a href="#" class="px-20 lg:px-8 py-3">Blog</a></li>
+                <li class="lg:ml-8">
                 <Button title="Hire me"></Button>
                 </li>
             </ul>
         </nav>
+
     </div>
 </header>
+
+<script>
+    const button = document.querySelector('#hamburger')
+    const nav = document.querySelector('nav')
+
+    button.addEventListener('click', function(event) {
+        button.classList.toggle('open')
+        nav.classList.toggle('opened')
+    })
+</script>
